@@ -1,5 +1,7 @@
-# Playing around with Perlin Noise
-A few projects and experiments using perlin noise.
+# Visualizations
+
+* Terrain Generation using Perlin Noise
+* Clifford Attractors
 
 ###### Note:
-Heavily based on Daniel Shiffman's Coding Challenges
+A few of these projects are based on Daniel Shiffman's Coding Challenges
