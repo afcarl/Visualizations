@@ -8,17 +8,25 @@ int block = 20;
 ArrayList<Particle> particles;
 
 ArrayList<PVector> flowfield;
+int[] colors;
 
 void setup() {
   size(1200, 800);
   background(255);
+  colorMode(HSB);
   particles = new ArrayList<Particle>();
   for(int i=0;i<particles_cnt;i++){
     particles.add(new Particle(random(width), random(height)));
   }
   flowfield = new ArrayList<PVector>();
+  colors = new int[height*width];
   for(int i=0;i<height*width/(block*block);i++){
     flowfield.add(new PVector(0,0));
+  }
+  for(int i=0;i<height;i++){
+    for(int j=0;j<width;j++){
+      colors[i*width+j] = int(noise(i/300.0,j/300.0)*255);
+    }
   }
 }
 

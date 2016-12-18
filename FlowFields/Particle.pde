@@ -41,7 +41,8 @@ class Particle {
   }
   
   void show() {
-    stroke(0, 5);
+    int colorx = colors[min(int(pos.y), height-1)*width+min(int(pos.x), width-1)];
+    stroke(colorx, 255, 180, 5);
     noFill();
     line(prev_pos.x, prev_pos.y, pos.x, pos.y);
   }
